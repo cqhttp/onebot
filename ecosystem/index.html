@@ -1,0 +1,1307 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>生态 - OneBot v12 标准文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-7GZP8RMCBB"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-7GZP8RMCBB",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GZP8RMCBB"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OneBot v12 标准文档" class="md-header__button md-logo" aria-label="OneBot v12 标准文档" data-md-component="logo">
+      
+  <img src="../assets/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OneBot v12 标准文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              生态
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/botuniverse/onebot/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    botuniverse/onebot
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../production/" class="md-tabs__link">
+      介绍
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      生态
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../specs/glossary/" class="md-tabs__link">
+        指南
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OneBot v12 标准文档" class="md-nav__button md-logo" aria-label="OneBot v12 标准文档" data-md-component="logo">
+      
+  <img src="../assets/logo-white.png" alt="logo">
+
+    </a>
+    OneBot v12 标准文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/botuniverse/onebot/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    botuniverse/onebot
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../production/" class="md-nav__link">
+        介绍
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          生态
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        生态
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#onebot-libonebot" class="md-nav__link">
+    OneBot 实现 / LibOneBot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onebot-sdk" class="md-nav__link">
+    OneBot 开发框架 / SDK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onebot" class="md-nav__link">
+    OneBot 应用案例
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        指南
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="指南" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          指南
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        概述
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="概述" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          概述
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/glossary/" class="md-nav__link">
+        术语表
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        OneBot RPC
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OneBot RPC" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          OneBot RPC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
+      
+      <label class="md-nav__link" for="__nav_4_2_1">
+        通信
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="通信" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          通信
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/communication/" class="md-nav__link">
+        通信概述
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/communication/http/" class="md-nav__link">
+        HTTP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/communication/http-webhook/" class="md-nav__link">
+        HTTP Webhook
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/communication/websocket/" class="md-nav__link">
+        正向 WebSocket
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/communication/websocket-reverse/" class="md-nav__link">
+        反向 WebSocket
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2_2">
+        数据协议
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数据协议" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据协议
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/onebot-rpc/event/" class="md-nav__link">
+        事件
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/onebot-rpc/action/" class="md-nav__link">
+        动作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/onebot-rpc/action-response/" class="md-nav__link">
+        动作响应
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        核心接口定义
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="核心接口定义" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          核心接口定义
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/message/message-array/" class="md-nav__link">
+        消息段
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/action/" class="md-nav__link">
+        动作（Action）
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/event/" class="md-nav__link">
+        事件（Event）
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#onebot-libonebot" class="md-nav__link">
+    OneBot 实现 / LibOneBot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onebot-sdk" class="md-nav__link">
+    OneBot 开发框架 / SDK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onebot" class="md-nav__link">
+    OneBot 应用案例
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/botuniverse/onebot/blob/v12-draft/v12/docs/ecosystem.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="_1">生态</h1>
+<div class="admonition 注意 warning">
+<p class="admonition-title">注意</p>
+<p>此页面已过时，在 V12 标准中，将进行对实现的重新收集，如果实现或框架兼容了 V12 标准将优先展示。</p>
+</div>
+<p>在曾经的 CQHTTP 插件 基础上，大量大量富有创造力的开发者们写出了许多优秀的 SDK、开发框架和机器人应用，成为 CKYU 和 CQHTTP 插件生态的一部分。现在 CKYU 已经画上句号，成为历史。而为了延续这一生态，将 CQHTTP 插件改称为 OneBot 标准，从改名以来，已发布了 OneBot v11 版本，v12 版本正在制定中。</p>
+<p>OneBot 标准制定的目的就是为了应用和生态构建一个统一的开发思想，让机器人应用的开发者更专注于聊天机器人功能本身，而不是重复繁杂的协议和接口对接。所以 OneBot 标准分为两个大模块：OneBot 实现（v12 版本后统称 LibOneBot）和 OneBot 开发框架（包括应用的 SDK）。</p>
+<h2 id="onebot-libonebot">OneBot 实现 / LibOneBot</h2>
+<p>OneBot 实现一般为一个独立的应用或独立的核心库，OneBot 实现一般与机器人功能本身无关，只作为 IM（即时通讯）应用 API 或协议的转换层。</p>
+<p>理论上，基于 OneBot 标准开发的<strong>任何</strong> SDK、框架和机器人应用，都可以在下面的不同实现中切换。在 v12 版本中，为了实现与旧版本标准的兼容，v12 标准下的 libonebot 应拥有对 v11 标准的兼容层。</p>
+<table>
+<thead>
+<tr>
+<th>项目地址</th>
+<th>兼容版本</th>
+<th>平台</th>
+<th>核心作者</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/richardchien/coolq-http-api">richardchien/coolq-http-api</a></td>
+<td>v11</td>
+<td>CKYU</td>
+<td>richardchien</td>
+<td>可在 Mirai 平台使用 <a href="https://github.com/iTXTech/mirai-native">mirai-native</a> 加载</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Mrs4s/go-cqhttp">Mrs4s/go-cqhttp</a></td>
+<td>v11</td>
+<td><a href="https://github.com/Mrs4s/MiraiGo">MiraiGo</a></td>
+<td>Mrs4s</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/yyuueexxiinngg/onebot-kotlin">yyuueexxiinngg/onebot-kotlin</a></td>
+<td>v11</td>
+<td><a href="https://github.com/mamoe/mirai">Mirai</a></td>
+<td>yyuueexxiinngg</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/takayama-lily/node-onebot">takayama-lily/node-onebot</a></td>
+<td>v11</td>
+<td><a href="https://github.com/takayama-lily/oicq">node-oicq</a></td>
+<td>takayama</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Yiwen-Chan/OneBot-YaYa">Yiwen-Chan/OneBot-YaYa</a></td>
+<td>v11</td>
+<td><a href="https://www.xianqubot.com/">先驱</a></td>
+<td>Kanri</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="onebot-sdk">OneBot 开发框架 / SDK</h2>
+<p>对于使用下面这些语言的机器人开发者，如果不想自己处理繁杂的请求和解析操作，可以尝试使用已经封装好的 SDK 或开发框架，对应语言的开发框架都遵循对应版本的 OneBot 标准。</p>
+<table>
+<thead>
+<tr>
+<th>语言</th>
+<th>兼容标准</th>
+<th>通信方式</th>
+<th>地址</th>
+<th>核心作者</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>v11</td>
+<td>HTTP, 反向 WS</td>
+<td><a href="https://github.com/nonebot/nonebot">nonebot/nonebot</a></td>
+<td>richardchien cleoold yanyongyu</td>
+<td></td>
+</tr>
+<tr>
+<td>Python</td>
+<td>v11</td>
+<td>HTTP, 反向 WS</td>
+<td><a href="https://github.com/nonebot/aiocqhttp">nonebot/aiocqhttp</a></td>
+<td>richardchien</td>
+<td></td>
+</tr>
+<tr>
+<td>Python</td>
+<td>v11</td>
+<td>HTTP, 反向 WS</td>
+<td><a href="https://github.com/nonebot/nonebot2">nonebot/nonebot2</a></td>
+<td>yanyongyu</td>
+<td></td>
+</tr>
+<tr>
+<td>Python</td>
+<td>v11</td>
+<td>HTTP, 反向 WS</td>
+<td><a href="https://github.com/SSmJaE/PepperBot">SSmJaE/PepperBot</a></td>
+<td>SSmJaE</td>
+<td></td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>v11</td>
+<td>正向 WS</td>
+<td><a href="https://github.com/momocow/node-cq-websocket">momocow/node-cq-websocket</a></td>
+<td>momocow</td>
+<td>项目已归档，不再更新</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>v11</td>
+<td>HTTP, 正向 WS, 反向 WS</td>
+<td><a href="https://github.com/koishijs/koishi">koishijs/koishi</a></td>
+<td>Shigma</td>
+<td></td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>v11</td>
+<td>正向 WS</td>
+<td><a href="https://github.com/CaoMeiYouRen/node-coolq-robot">CaoMeiYouRen/node-coolq-robot</a></td>
+<td>CaoMeiYouRen</td>
+<td>项目已归档，不再更新</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/XHMM/lemon-bot">XHMM/lemon-bot</a></td>
+<td>XHMM</td>
+<td></td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>v11</td>
+<td>正向 WS</td>
+<td><a href="https://github.com/pandolia/js-bot">pandolia/js-bot</a></td>
+<td>pandolia</td>
+<td>作者已删仓库</td>
+</tr>
+<tr>
+<td>Deno</td>
+<td>v11</td>
+<td>反向 WS</td>
+<td><a href="https://github.com/nenojs/deno-cqhttp">nenojs/deno-cqhttp</a></td>
+<td>rikakomoe</td>
+<td></td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>v11</td>
+<td>反向 WS</td>
+<td><a href="https://github.com/zhamao-robot/zhamao-framework">zhamao-robot/zhamao-framework</a></td>
+<td>crazywhalecc</td>
+<td></td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/LovelyA72/YeziiBot-v2">LovelyA72/YeziiBot-v2</a></td>
+<td>LovelyA72</td>
+<td></td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/ParaParty/MPBot">ParaParty/MPBot</a></td>
+<td>endymx</td>
+<td></td>
+</tr>
+<tr>
+<td>Java</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/HyDevelop/PicqBotX">HyDevelop/PicqBotX</a></td>
+<td>Hykilpikonna</td>
+<td></td>
+</tr>
+<tr>
+<td>Java Kotlin Groovy</td>
+<td>v11</td>
+<td>反向 WS</td>
+<td><a href="https://github.com/lz1998/Spring-CQ">lz1998/Spring-CQ</a>（<a href="https://www.bilibili.com/video/av89649630/">教程</a>）</td>
+<td>lz1998</td>
+<td></td>
+</tr>
+<tr>
+<td>Java</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/ForteScarlet/simple-robot-core">ForteScarlet/simple-robot-core</a></td>
+<td>ForteScarlet</td>
+<td></td>
+</tr>
+<tr>
+<td>Java</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/thevsk/cqhttp-java-jfinal-sdk">thevsk/cqhttp-java-jfinal-sdk</a></td>
+<td>thevsk</td>
+<td>项目已不再更新</td>
+</tr>
+<tr>
+<td>Kotlin</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/JuerGenie/juerobot">JuerGenie/juerobot</a></td>
+<td>JuerGenie</td>
+<td></td>
+</tr>
+<tr>
+<td>Go</td>
+<td>v11</td>
+<td><strong>API:</strong> HTTP, 正向 WS <strong>Event:</strong> HTTP, 长轮询, 正向 WS, 反向 WS</td>
+<td><a href="https://github.com/catsworld/qq-bot-api">catsworld/qq-bot-api</a></td>
+<td>catsworld rikakomoe</td>
+<td>项目归档，不再更新</td>
+</tr>
+<tr>
+<td>Go</td>
+<td>v11</td>
+<td>正向 WS</td>
+<td><a href="https://github.com/wdvxdr1123/ZeroBot">wdvxdr1123/ZeroBot</a></td>
+<td>wdvxdr1123</td>
+<td></td>
+</tr>
+<tr>
+<td>Go</td>
+<td>v11</td>
+<td>正向 WS</td>
+<td><a href="https://github.com/0ojixueseno0/go-Pichubot">0ojixueseno0/go-Pichubot</a></td>
+<td>0ojixueseno0</td>
+<td></td>
+</tr>
+<tr>
+<td>C#</td>
+<td>v11</td>
+<td>HTTP, 正向 WS, 反向 WS</td>
+<td><a href="https://github.com/int-and-his-friends/Sisters.WudiLib">int-and-his-friends/Sisters.WudiLib</a></td>
+<td>bleatingsheep</td>
+<td></td>
+</tr>
+<tr>
+<td>C#</td>
+<td>v11</td>
+<td>HTTP, 正向 WS, 反向 WS</td>
+<td><a href="https://github.com/frank-bots/cqhttp.Cyan">frank-bots/cqhttp.Cyan</a></td>
+<td>frankli0324</td>
+<td></td>
+</tr>
+<tr>
+<td>C#</td>
+<td>v11</td>
+<td>反向 WS</td>
+<td><a href="https://github.com/cqbef/cqhttp.WebSocketReverse.NETCore">cqbef/cqhttp.WebSocketReverse.NETCore</a></td>
+<td>cqbef</td>
+<td>项目归档，不再更新</td>
+</tr>
+<tr>
+<td>C#</td>
+<td>v11</td>
+<td>正向 WS, 反向 WS</td>
+<td><a href="https://github.com/Yukari316/Sora">Yukari316/Sora</a></td>
+<td>Yukari316</td>
+<td></td>
+</tr>
+<tr>
+<td>C#</td>
+<td>v11</td>
+<td>反向 WS</td>
+<td><a href="https://github.com/ParaParty/OneBot-Framework">ParaParty/OneBot-Framework</a></td>
+<td>ExerciseBook LovelyCatHyt Yorkin</td>
+<td>使用 <a href="https://github.com/Yukrai103/Sora">Sora</a> 作 OneBot 实现，配合 <a href="https://docs.microsoft.com/en-us/aspnet/core/">ASP.Net Core</a> 作 IOC DI 框架的 OneBot 指令路由系统</td>
+</tr>
+<tr>
+<td>C#</td>
+<td>v11</td>
+<td>HTTP, 正向 WS</td>
+<td><a href="https://github.com/ac682/Ac682.Hyperai.Clients.CQHTTP">ac682/Ac682.Hyperai.Clients.CQHTTP</a></td>
+<td>ac682</td>
+<td>使用 <a href="https://github.com/theGravityLab/Hyperai">Hyperai.Abstractions</a> 作为基础设施。可以单独使用，也可以作为 <a href="https://github.com/theGravityLab/HyperaiShell">HyperaiShell</a> 的适配器</td>
+</tr>
+<tr>
+<td>PowerShell</td>
+<td>v11</td>
+<td>HTTP</td>
+<td><a href="https://github.com/cqmoe/cqhttp-powershell-sdk">cqmoe/cqhttp-powershell-sdk</a></td>
+<td>richardchien</td>
+<td>项目归档，不再更新</td>
+</tr>
+<tr>
+<td>Lua</td>
+<td>v11</td>
+<td>HTTP, 正向 WS</td>
+<td><a href="https://github.com/cleoold/cqhttp-lua53-sdk">cleoold/cqhttp-lua53-sdk</a></td>
+<td>cleoold</td>
+<td>项目归档，不再更新</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>v11</td>
+<td>正向 WS</td>
+<td><a href="https://github.com/super1207/MiraiCQ">super1207/MiraiCQ</a></td>
+<td>super1207</td>
+<td></td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td>v11</td>
+<td>HTTP, 正向 WS</td>
+<td><a href="https://github.com/fantasyzhjk/ruby-cqhttp">fantasyzhjk/ruby-cqhttp</a></td>
+<td>fantasyzhjk</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="onebot">OneBot 应用案例</h2>
+<p>聊天机器人可以用来做很多有意思的事情，这里列出一些基于 OneBot 标准的应用案例，欢迎补充。</p>
+<table>
+<thead>
+<tr>
+<th>项目地址</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/milkice233/efb-qq-slave">milkice233/efb-qq-slave</a></td>
+<td>基于 ehForwarderBot 框架的 QQ 从端</td>
+</tr>
+<tr>
+<td><a href="https://projectriri.github.io/bot-gateway/">projectriri/bot-gateway</a></td>
+<td>提供跨聊天平台的通用机器人 API 的机器人消息网关</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jqqqqqqqqqq/UnifiedMessageRelay">jqqqqqqqqqq/UnifiedMessageRelay</a></td>
+<td>QQ &lt;-&gt; Telegram Bot Framework &amp; Forwarder</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Mother-Ship/cabbageWeb">Mother-Ship/cabbageWeb</a></td>
+<td>基于 Java Web 的 osu! 游戏数据查询机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bdbai/Kobirt">bdbai/Kobirt</a></td>
+<td>Ingress 游戏辅助机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/JRT-FOREVER/hub2coolq">JRT-FOREVER/hub2coolq</a></td>
+<td>GitHub webhook 消息转发至 QQ 群</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Kurarion/Bangumi-for-QQ">Kurarion/Bangumi-for-QQ</a></td>
+<td>用于在 QQ 平台便捷地使用 Bangumi 部分功能（查寻条目、更新条目进度等）</td>
+</tr>
+<tr>
+<td><a href="https://github.com/rikakomoe/cqhttp-twitter-bot">rikakomoe/cqhttp-twitter-bot</a></td>
+<td>自动订阅 Twitter 发送到 QQ</td>
+</tr>
+<tr>
+<td><a href="https://github.com/XiaoLin0815/QQ2TG">XiaoLin0815/QQ2TG</a></td>
+<td>帮助 QQ 与 Telegram 互联的小程序</td>
+</tr>
+<tr>
+<td><a href="https://github.com/spacemeowx2/splatoon2-qqbot">spacemeowx2/splatoon2-qqbot</a></td>
+<td>宇宙第一的 Splatoon2 的地图机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OYMiss/forward-bot">OYMiss/forward-bot</a></td>
+<td>用 Telegram 和 QQ 好友聊天的转发机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mrthanlon/SICNUBOT">mrthanlon/SICNUBOT</a></td>
+<td>专为四川师范大学设计用于审核发布消息用的 QQ 机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/billjyc/pocket48/tree/coolq">billjyc/pocket48</a></td>
+<td>监控成员口袋 48 聚聚房间、微博和摩点项目</td>
+</tr>
+<tr>
+<td><a href="https://github.com/chinshin/CQBot_hzx">chinshin/CQBot_hzx</a></td>
+<td>摩点 &amp; 微博 &amp; 口袋 48 机器人（BEJ48-黄子璇）</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Ice-Hazymoon/grnd_bot">Ice-Hazymoon/grnd_bot</a></td>
+<td>订阅 RSSHub 更新并推送到 QQ 群</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Ray-Eldath/Avalon">Ray-Eldath/Avalon</a></td>
+<td>多功能、可扩展的群机器人，支持 QQ 和 Discord</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Bluefissure/FFXIVBOT">Bluefissure/FFXIVBOT</a></td>
+<td>基于 Django Channels 的最终幻想 14 游戏数据查询机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Milkitic/Daylily">Milkitic/Daylily</a></td>
+<td>基于 ASP.NET Core 的跨平台机器人（含快速开发插件框架）</td>
+</tr>
+<tr>
+<td><a href="https://github.com/cczu-osa/aki">cczu-osa/aki</a></td>
+<td>基于 NoneBot 的多功能 QQ 机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/cleoold/sendo-erika">cleoold/sendo-erika</a></td>
+<td>基于 cqhttp 和 NoneBot 的，主要通过私聊摇控的 QQ 机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/duan602728596/qqtools">duan602728596/qqtools</a></td>
+<td>基于 Nwjs 的 QQ 群工具（摩点、口袋 48、微博提醒、入群欢迎、定时喊话、自定义命令和回复信息等）</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Tsuk1ko/CQ-picfinder-robot">Tsuk1ko/CQ-picfinder-robot</a></td>
+<td>基于 Saucenao 的搜图机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kasora/dice">kasora/dice</a></td>
+<td>COC7 骰子 QQ 机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ac682/arcbot">ac682/arcbot</a></td>
+<td>基于 <a href="https://github.com/theGravityLab/ProjHyperai">ProjHyperai</a> 的群基础机器人，提供推送转发和一些娱乐功能</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shidenggui/tuishujun-for-qq">shidenggui/tuishujun-for-qq</a></td>
+<td>基于推书君的小说查询推荐 QQ 机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/JuerGenie/cn.juerwhang.jgbot">JuerGenie/cn.juerwhang.jgbot</a></td>
+<td>基于 <a href="https://github.com/JuerGenie/juerobot">JuerGenie/juerobot</a> 的娱乐用 QQ 机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/drsanwujiang/DiceRobot">drsanwujiang/DiceRobot</a></td>
+<td>一个基于 coolq-http-api 插件的 TRPG 骰子机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/UltraSoundX/SDFMU-Library">UltraSoundX/SDFMU-Library</a></td>
+<td>山东第一医科大图书馆预约机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Quan666/ELF_RSS">Quan666/ELF_RSS</a></td>
+<td>基于 NoneBot 的，交互式 RSS 订阅、转发机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/lz1998/Spring-CQ-web">lz1998/Spring-CQ-web</a></td>
+<td>基于 SpringCQ 的机器人 web 控制台</td>
+</tr>
+<tr>
+<td><a href="https://github.com/suisei-cn/stargazer-qq">suisei-cn/stargazer-qq</a></td>
+<td>一个灵活的 vtuber 发推/直播动态监控机器人</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Ninzore/Wecab">Ninzore/Wecab</a></td>
+<td>网络内容聚合机器人，支持微博、B站、Twitter 等</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mgsky1/FG">mgsky1/FG</a></td>
+<td>基于 NoneBot 的 QQ 群机器人，特色功能是利用机器学习算法提取每日的聊天热词，并使用词云+文本的方式进行展示</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Yiwen-Chan/ZeroBot-Plugin">Yiwen-Chan/ZeroBot-Plugin</a></td>
+<td>基于 ZeroBot 开发的群管、点歌、搜图等功能</td>
+</tr>
+<tr>
+<td><a href="https://github.com/yuudi/gypsum">yuudi/gypsum</a></td>
+<td>简单易用的网页控制台，匹配消息进行回复，也可以使用 jinja 模板与 lua 脚本实现高级功能</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../production/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 介绍" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              介绍
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../specs/glossary/" class="md-footer__link md-footer__link--next" aria-label="下一页: 术语表" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              术语表
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+    
+  </body>
+</html>
